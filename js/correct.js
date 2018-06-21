@@ -2,6 +2,8 @@ var textNode, walk=document.createTreeWalker(document,NodeFilter.SHOW_TEXT,null,
 while(textNode=walk.nextNode()) {
     textNode.nodeValue = textNode.nodeValue
     .replace(/Emmanuel Macron/gi, 'Manu')
+    .replace(/Macron/gi, 'Manu')
+    .replace(/le Président de la République Française/gi, 'Manu')
     .replace(/le Président de la République/gi, 'Manu')
     .replace(/Monsieur le Président/gi, 'Manu')
 }
